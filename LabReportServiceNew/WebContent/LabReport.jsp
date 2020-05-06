@@ -16,7 +16,7 @@
 <title>Lab Report Management</title>
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery-3.4.0.min.js"></script>
-<script src="Components/Hospitals.js"></script>
+<script src="Components/LabReport.js"></script>
 </head>
 <body>
 	<h1>Lab Report Management</h1>

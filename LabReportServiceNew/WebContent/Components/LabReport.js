@@ -22,7 +22,7 @@ $(document).on("click", "#btnSave", function(event) {
 	var type = ($("#hidHospitalIDSave").val() == "") ? "POST" : "PUT";
 
 	$.ajax({
-		url : "HospitalsAPI",
+		url : "LabReportAPI",
 		type : type,
 		data : $("#formHospital").serialize(),
 		dataType : "text",
@@ -57,9 +57,9 @@ function onHospitalSaveComplete(response, status) {
 //DELETE=============================================================================
 	$(document).on("click", ".btnRemove", function(event) {
 		$.ajax({
-			url : "HospitalsAPI",
+			url : "LabReportAPI",
 			type : "DELETE",
-			data : "Hospital_ID=" + $(this).data("hospitalid"),
+			data : "lReportID=" + $(this).data("hospitalid"),
 			dataType : "text",
 			complete : function(response, status) {
 				onHospitalDeleteComplete(response.responseText, status);
@@ -96,38 +96,31 @@ $(document).on(
 		function(event) {
 			$("#hidHospitalIDSave").val(
 					$(this).closest("tr").find('#hidHopsitalIDUpdate').val());
-			$("#H_Name").val($(this).closest("tr").find('td:eq(0)').text());
-			$("#H_Address").val($(this).closest("tr").find('td:eq(1)').text());
-			$("#H_City").val($(this).closest("tr").find('td:eq(2)').text());
-			$("#H_phonenumber").val($(this).closest("tr").find('td:eq(3)').text());
-			$("#H_Desc").val($(this).closest("tr").find('td:eq(4)').text());
+			$("#lReportNum").val($(this).closest("tr").find('td:eq(0)').text());
+			$("#lReportName").val($(this).closest("tr").find('td:eq(1)').text());
+			$("#lReportDet").val($(this).closest("tr").find('td:eq(2)').text());
+	
 		});
 // CLIENTMODEL=========================================================================
 function validateItemForm() {
-	// HOSPITALNAME
-	if ($("#H_Name").val().trim() == "") {
-		return "Insert the name of the hospital.";
-	}
-	// ADDRESS
-	if ($("#H_Address").val().trim() == "") {
-		return "Insert the Address of the hopsital.";
-	}
-	// CITY-------------------------------
-	if ($("#H_City").val().trim() == "") {
-		return "Insert the city name of the hospital.";
-	}
+	
 	// PHONE NUMBER------------------------
-	if ($("#H_phonenumber").val().trim() == "") {
-		return "Insert the PhoneNumber of the hopsital.";
+	if ($("#lReportNum").val().trim() == "") {
+		return "Insert the Report Number of the Lab.";
 	}
 	// is numerical value
-	var tmpPhone = $("#H_phonenumber").val().trim();
+	var tmpPhone = $("#lReportNum").val().trim();
 	if (!$.isNumeric(tmpPhone)) {
-		return "Insert Only Numbers for Phone No.";
+		return "Insert Only Numbers for Lab Report No.";
 	}
 	// DESC------------------------
-	if ($("#H_Desc").val().trim() == "") {
-		return "Insert Dscription about the hospital.";
+	if ($("#lReportName").val().trim() == "") {
+		return "Insert the name of the Lab Report.";
 	}
+	
+	if ($("#lReportDet").val().trim() == "") {
+		return "Insert the Lab Report Details.";
+	}
+	
 	return true;
 }

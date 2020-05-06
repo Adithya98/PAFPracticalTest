@@ -86,7 +86,7 @@ public class LabReport {
 				
 //				output += "<tr><td>" + Hospital_ID + "</td>";
 //				output += "<td>" + H_Name + "</td>";
-				output += "<tr><td>" + lReportNum + "</td>";
+//				output += "<tr><td>" + lReportNum + "</td>";
 				output += "<td>" + lReportName + "</td>";
 				
 				output += "<td>" + lReportDet + "</td>";
