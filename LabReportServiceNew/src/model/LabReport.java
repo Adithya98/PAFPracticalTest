@@ -168,7 +168,7 @@ public class LabReport {
 			
 		} catch (Exception e) {
 			//output = "Error while deleting the user.";
-			output = "{\"status\":\"error\", \"data\":\"Error while deleting the Lab Reports.\"}";
+			output = "{\"status\":\"error\", \"data\":\"Error while deleting the Lab Report.\"}";
 			System.err.println(e.getMessage());
 		}
 		return output;
