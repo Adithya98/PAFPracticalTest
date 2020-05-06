@@ -23,7 +23,7 @@
 
 
 
-	<form id="formHospital" name="formHospital" method="post" action="Hospital.jsp">
+	<form id="formHospital" name="formHospital" method="post" action="LabReport.jsp">
 		Lab Report Number : <input id="lReportNum" name="lReportNum" type="text"
 			class="form-control form-control-sm"> <br> Lab Report Name : <input
 			id="lReportName" name="lReportName" type="text"

@@ -42,7 +42,6 @@ public class LabReport {
 			preparedStmt.setInt(1, 0);
 			preparedStmt.setString(2, num);
 			preparedStmt.setString(3, name);
-
 			preparedStmt.setString(4, det);
 			// execute the statement
 			preparedStmt.execute();

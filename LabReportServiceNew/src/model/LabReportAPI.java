@@ -16,7 +16,7 @@ import model.LabReport;
 /**
  * Servlet implementation class HospitalsAPI
  */
-@WebServlet("/HospitalsAPI")
+@WebServlet("/LabReportAPI")
 public class LabReportAPI extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	LabReport userObj = new LabReport();
