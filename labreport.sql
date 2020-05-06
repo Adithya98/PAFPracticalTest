@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2020 at 08:37 AM
+-- Generation Time: May 06, 2020 at 05:43 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -40,11 +40,8 @@ CREATE TABLE `labreports` (
 --
 
 INSERT INTO `labreports` (`lReportID`, `lReportNum`, `lReportName`, `lReportDet`) VALUES
-(1, '10', 'Name 1', '1st Report'),
-(2, '17', 'Name 8', 'New Report'),
 (7, '30', 'Name 13', 'New Important Report 2'),
-(11, '25', 'Name 13', 'Important Lab Report 3'),
-(12, '26', 'Name 13', 'Important Lab Report 3');
+(11, '25', 'Name 13', 'Important Lab Report 3');
 
 --
 -- Indexes for dumped tables
@@ -64,7 +61,7 @@ ALTER TABLE `labreports`
 -- AUTO_INCREMENT for table `labreports`
 --
 ALTER TABLE `labreports`
-  MODIFY `lReportID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `lReportID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
