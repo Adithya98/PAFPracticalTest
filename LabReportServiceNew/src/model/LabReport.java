@@ -52,7 +52,7 @@ public class LabReport {
 			
 		} catch (Exception e) {
 			//output = "Error while inserting the user.";
-			output = "{\"status\":\"error\", \"data\":\"Error while inserting the Lab Report.\"}";
+			output = "{\"status\":\"error\", \"data\":\"Error while inserting the Lab Reports.\"}";
 			System.err.println(e.getMessage());
 		}
 		return output;
