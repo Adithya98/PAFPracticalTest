@@ -109,7 +109,7 @@ public class LabReport {
 			// Complete the html table
 			output += "</table>";
 		} catch (Exception e) {
-			output = "Error while reading the users.";
+			output = "Error while reading the Lab Reports.";
 			System.err.println(e.getMessage());
 		}
 		return output;
